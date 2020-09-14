@@ -629,7 +629,7 @@ Now that you have some experience *viewing* function types, you're
 about to be asked to write some. Here are a few common mistakes, and
 what the error messages look like in the interpreter:
 
-Say we accidentally added a two input type to `funType0`:
+Say when adding the type signature to `funType0` we accidentally used a two-input type:
 
 ```comment
 funType0 : [5] -> [5] -> [5]
@@ -650,7 +650,7 @@ to take two 5-bit bitvectors. But,
 Cryptol **inferred** (from the value definition) that the function
 just takes a single 5-bit bitvector.
 
-Say we accidentally added the wrong type:
+Say we instead accidentally included the wrong input or output type:
 
 ```comment
 funType0 : [4] -> [12]
@@ -672,8 +672,8 @@ Upon reloading this file, we would see:
 Now we get two error messages. One is complaining about the input
 type, the other about the output type.
 
-**EXERCISE**: Just like in the previous section, you're now being
-asked to fill in *any valid monomorphic* type for each of the
+**EXERCISE**: Just like in the previous section, where you filled in value types,
+you're now being asked to fill in *any valid monomorphic* type for each of the
 functions below. Some will have multiple correct answers. Once done,
 reload this file to check that you've gotten them correct.
 
